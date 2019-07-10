@@ -15,12 +15,14 @@ import com.mobileapps.flickr.R;
 import com.mobileapps.flickr.adapter.ImagesAdapter;
 import com.mobileapps.flickr.model.FlickrResponse;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity implements MainViewInterface
 {
 
-//    @BindView(R.id.rvPicture)
+    @BindView(R.id.rvPicture)
     RecyclerView rvPictures;
 
     private String TAG = "MainActivity";
@@ -32,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // ButterKnife.bind(this);
-        rvPictures = findViewById(R.id.rvPicture);
+       ButterKnife.bind(this);
+        //rvPictures = findViewById(R.id.rvPicture);
 
         Log.d("Heiner","Im in the main actvity");
 
